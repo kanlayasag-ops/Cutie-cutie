@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="th" data-bs-theme="light">
+
+<head>
+    <title>Gallery | My Kawaii Collection ✨</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts: Fahkwang & Pinyon Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Pinyon+Script&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="top">
+
+    <!-- CUTIE NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-pink d-flex align-items-center gap-2" href="index.html">
+                <span class="fs-5">🎀</span> My Kawaii Space
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-md-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold text-pink px-3 py-2 rounded-pill bg-pink-light"
+                            href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item ms-md-2">
+                        <a class="btn btn-pastel px-4 py-2 rounded-pill shadow-sm" href="contact.html">Say Hello 💌</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / GALLERY HERO & INTERACTIVE SEARCH -->
+    <section class="gallery-hero py-5 text-center">
+        <div class="container py-3">
+            <span class="badge-bubble mb-3">🖼️ Interactive Flip Cards</span>
+            <h1 class="display-5 fw-bold text-dark mb-3">
+                Kawaii <span class="font-pinyon text-pink-highlight" style="font-size: 1.3em;">Gallery Board</span>
+            </h1>
+            <p class="lead text-muted mx-auto max-w-600 mb-4">
+                รวบรวมของสะสมน่ารักๆ ในสไตล์การ์ดโพลารอยด์ ลองคลิกที่รูปเพื่อพลิกดูดีเทลหลังการ์ดกันได้เลย! ✨
+            </p>
+
+            <!-- Search Bar -->
+            <div class="search-box-wrapper mx-auto mb-4">
+                <input type="text" id="gallerySearch" class="form-control search-input"
+                    placeholder="🔍 พิมพ์ชื่อไอเท็มที่ต้องการค้นหา...">
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-filter active rounded-pill px-4" data-filter="all">All Items 🌸</button>
+                <button class="btn btn-filter rounded-pill px-4" data-filter="Accessory">Accessory 🎀</button>
+                <button class="btn btn-filter rounded-pill px-4" data-filter="Plushie">Plushie 🧸</button>
+                <button class="btn btn-filter rounded-pill px-4" data-filter="Fashion">Fashion 👜</button>
+                <button class="btn btn-filter rounded-pill px-4" data-filter="Gadget">Gadget 📸</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN GALLERY FLIP CARD BOARD -->
+    <main class="container py-5">
+        <div class="row g-4" id="galleryContainer">
+
+            <!-- Card 1: Strawberry Keychain -->
+            <div class="col-12 col-md-6 col-lg-4 gallery-item-col" data-category="Accessory"
+                data-title="Strawberry Keychain">
+                <div class="flip-card card-tilt-left" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <!-- ด้านหน้าการ์ด (เอาข้อความบอกออก ติดสติ๊กเกอร์มินิมอลแทน) -->
+                        <div class="flip-card-front">
+                            <div class="washi-tape tape-pink"></div>
+                            <div class="card-img-frame">
+                                <img src="images/keychain.jpg" class="card-img" alt="Strawberry Keychain">
+                                <span class="sticker-tag">Accessory 🍓</span>
+                                <span class="flip-hint-badge">✨ Click</span>
+                            </div>
+                            <div class="card-caption pt-3">
+                                <h5 class="fw-bold mb-0 text-dark">Strawberry Keychain</h5>
+                            </div>
+                        </div>
+                        <!-- ด้านหลังการ์ด (จัดระยะห่างสมดุล นุ่มตา) -->
+                        <div class="flip-card-back p-4 d-flex flex-column justify-content-between">
+                            <div class="washi-tape tape-pink"></div>
+                            <div class="card-back-header">
+                                <span class="badge-tag mb-2">Accessory 🍓</span>
+                                <h4 class="fw-bold text-dark m-0">Strawberry Keychain</h4>
+                            </div>
+                            <div class="card-back-body py-2">
+                                <p class="card-story-text text-muted mb-0">
+                                    พวงกุญแจลูกปัดรูปสตรอว์เบอร์รี่สุดคาวาอี้!
+                                    เป็นชิ้นงานแฮนด์เมดโทนหวานพาสเทลที่เอาไว้ห้อยกระเป๋าผ้าแล้วเข้ากันสุดๆ
+                                    หยิบมามองทีไรก็รู้สึกสดใสทุกที ✨
+                                </p>
+                            </div>
+                            <div class="card-back-footer pt-2">
+                                <span class="btn-flip-back rounded-pill px-3 py-1">🔄 Turn back</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Fluffy Lace Bear -->
+            <div class="col-12 col-md-6 col-lg-4 gallery-item-col" data-category="Plushie"
+                data-title="Fluffy Lace Bear">
+                <div class="flip-card card-tilt-right" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <!-- ด้านหน้าการ์ด -->
+                        <div class="flip-card-front">
+                            <div class="washi-tape tape-blue"></div>
+                            <div class="card-img-frame">
+                                <img src="images/bear.jpg" class="card-img" alt="Fluffy Lace Bear">
+                                <span class="sticker-tag">Plushie 🧸</span>
+                                <span class="flip-hint-badge">✨ Click</span>
+                            </div>
+                            <div class="card-caption pt-3">
+                                <h5 class="fw-bold mb-0 text-dark">Fluffy Lace Bear</h5>
+                            </div>
+                        </div>
+                        <!-- ด้านหลังการ์ด -->
+                        <div class="flip-card-back p-4 d-flex flex-column justify-content-between">
+                            <div class="washi-tape tape-blue"></div>
+                            <div class="card-back-header">
+                                <span class="badge-tag mb-2">Plushie 🧸</span>
+                                <h4 class="fw-bold text-dark m-0">Fluffy Lace Bear</h4>
+                            </div>
+                            <div class="card-back-body py-2">
+                                <p class="card-story-text text-muted mb-0">
+                                    น้องหมีขนฟูนุ่มใส่หมวกโบลูกไม้สีฟ้าพาสเทล ชิ้นนี้กอดอุ่นละมุนใจมาก
+                                    เป็นของสะสมชิ้นโปรดที่ตั้งไว้บนเตียงคอยฮีลใจในวันที่เหนื่อยล้า 💙
+                                </p>
+                            </div>
+                            <div class="card-back-footer pt-2">
+                                <span class="btn-flip-back rounded-pill px-3 py-1">🔄 Turn back</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Floral Vintage Bag -->
+            <div class="col-12 col-md-6 col-lg-4 gallery-item-col" data-category="Fashion"
+                data-title="Floral Vintage Bag">
+                <div class="flip-card card-tilt-left" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <!-- ด้านหน้าการ์ด -->
+                        <div class="flip-card-front">
+                            <div class="washi-tape tape-yellow"></div>
+                            <div class="card-img-frame">
+                                <img src="images/bag.jpg" class="card-img" alt="Floral Vintage Bag">
+                                <span class="sticker-tag">Fashion 👜</span>
+                                <span class="flip-hint-badge">✨ Click</span>
+                            </div>
+                            <div class="card-caption pt-3">
+                                <h5 class="fw-bold mb-0 text-dark">Floral Vintage Bag</h5>
+                            </div>
+                        </div>
+                        <!-- ด้านหลังการ์ด -->
+                        <div class="flip-card-back p-4 d-flex flex-column justify-content-between">
+                            <div class="washi-tape tape-yellow"></div>
+                            <div class="card-back-header">
+                                <span class="badge-tag mb-2">Fashion 👜</span>
+                                <h4 class="fw-bold text-dark m-0">Floral Vintage Bag</h4>
+                            </div>
+                            <div class="card-back-body py-2">
+                                <p class="card-story-text text-muted mb-0">
+                                    กระเป๋าผ้าคอตตอนลายดอกไม้แต่งระบายลูกไม้สไตล์วินเทจใบนี้จุของได้เยอะสุดๆ
+                                    แถมช่วยคอมพลีทลุคหวานๆ ในวันสบายๆ ได้ดีมากเลย! 🌸
+                                </p>
+                            </div>
+                            <div class="card-back-footer pt-2">
+                                <span class="btn-flip-back rounded-pill px-3 py-1">🔄 Turn back</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Cutie Camera -->
+            <div class="col-12 col-md-6 col-lg-4 gallery-item-col" data-category="Gadget" data-title="Cutie Camera">
+                <div class="flip-card card-tilt-right" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <!-- ด้านหน้าการ์ด -->
+                        <div class="flip-card-front">
+                            <div class="washi-tape tape-pink"></div>
+                            <div class="card-img-frame">
+                                <img src="images/camera.jpg" class="card-img" alt="Cutie Camera">
+                                <span class="sticker-tag">Gadget 📸</span>
+                                <span class="flip-hint-badge">✨ Click</span>
+                            </div>
+                            <div class="card-caption pt-3">
+                                <h5 class="fw-bold mb-0 text-dark">Cutie Camera</h5>
+                            </div>
+                        </div>
+                        <!-- ด้านหลังการ์ด -->
+                        <div class="flip-card-back p-4 d-flex flex-column justify-content-between">
+                            <div class="washi-tape tape-pink"></div>
+                            <div class="card-back-header">
+                                <span class="badge-tag mb-2">Gadget 📸</span>
+                                <h4 class="fw-bold text-dark m-0">Cutie Camera</h4>
+                            </div>
+                            <div class="card-back-body py-2">
+                                <p class="card-story-text text-muted mb-0">
+                                    กล้องดิจิตอลยุค Y2K ดีไซน์สีชมพูสุดน่ารัก ถ่ายรูปออกมาได้โทนละมุนฟิล์มสุดๆ
+                                    แถมยังเอามาแปะสติ๊กเกอร์ใช้เป็นพร็อพถ่ายรูปเก๋ๆ ได้อีกด้วย! 💖
+                                </p>
+                            </div>
+                            <div class="card-back-footer pt-2">
+                                <span class="btn-flip-back rounded-pill px-3 py-1">🔄 Turn back</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer py-5 text-center text-muted border-top mt-5">
+        <div class="container">
+            <p class="mb-1 fw-semibold text-dark">My Kawaii Collection Space 💖</p>
+            <small>© 2026 Designed with pastel vibes & lots of love.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-QF6j5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q6k5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- GALLERY INTERACTIVE SCRIPT (ระบบค้นหา + Filter) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("gallerySearch");
+            const filterBtns = document.querySelectorAll(".btn-filter");
+            const items = document.querySelectorAll(".gallery-item-col");
+
+            let activeFilter = "all";
+
+            function filterGallery() {
+                const searchText = searchInput.value.toLowerCase().trim();
+
+                items.forEach(item => {
+                    const category = item.getAttribute("data-category");
+                    const title = item.getAttribute("data-title").toLowerCase();
+
+                    const matchesFilter = (activeFilter === "all" || category === activeFilter);
+                    const matchesSearch = title.includes(searchText);
+
+                    if (matchesFilter && matchesSearch) {
+                        item.style.display = "block";
+                        item.classList.add("fade-in");
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener("click", function () {
+                    filterBtns.forEach(b => b.classList.remove("active"));
+                    this.classList.add("active");
+                    activeFilter = this.getAttribute("data-filter");
+                    filterGallery();
+                });
+            });
+
+            searchInput.addEventListener("keyup", filterGallery);
+        });
+    </script>
+</body>
+
+</html>

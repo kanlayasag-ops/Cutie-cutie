@@ -1,0 +1,573 @@
+/* --- ROOT VARIABLES --- */
+:root {
+    --bg-kawaii: #fff9fc;
+    --primary-pink: #ff8fab;
+    --pastel-blue: #d7f1ff;
+    --pastel-pink-light: #ffe5ec;
+    --pastel-yellow-light: #fef08a;
+    --text-color: #4a4e69;
+    --card-bg: #ffffff;
+}
+
+body {
+    background-color: var(--bg-kawaii);
+    color: var(--text-color);
+    font-family: 'Fahkwang', sans-serif !important;
+    letter-spacing: 0.2px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px dashed var(--pastel-pink-light);
+}
+
+.brand-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-pink);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.text-pink {
+    color: #ff5c8a !important;
+}
+
+.bg-pink-light {
+    background-color: var(--pastel-pink-light) !important;
+    border-radius: 20px;
+}
+
+.btn-pastel {
+    background-color: var(--primary-pink);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-pastel:hover {
+    background-color: #ff6b95;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--primary-pink);
+    color: var(--primary-pink);
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary-pink);
+    color: white;
+}
+
+.badge-bubble {
+    background-color: white;
+    color: #ff5c8a;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(255, 143, 171, 0.15);
+    display: inline-block;
+}
+
+.text-pink-highlight {
+    color: #ff5c8a;
+}
+
+/* SCRAPBOOK STICKY NOTE */
+.scrapbook-sticky-note {
+    background: #fffdf0;
+    border: 2px dashed #fcd34d;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(252, 211, 77, 0.15);
+    transform: rotate(-1deg);
+}
+
+/* WASHI TAPE ELEMENTS */
+.washi-tape {
+    width: 90px;
+    height: 26px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.85;
+    z-index: 5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tape-pink {
+    background-color: rgba(255, 182, 193, 0.7);
+    border-left: 2px dashed rgba(255, 255, 255, 0.6);
+    border-right: 2px dashed rgba(255, 255, 255, 0.6);
+}
+
+.tape-blue {
+    background-color: rgba(186, 230, 253, 0.7);
+    border-left: 2px dashed rgba(255, 255, 255, 0.6);
+    border-right: 2px dashed rgba(255, 255, 255, 0.6);
+}
+
+.tape-yellow {
+    background-color: rgba(254, 240, 138, 0.8);
+    border-left: 2px dashed rgba(255, 255, 255, 0.6);
+    border-right: 2px dashed rgba(255, 255, 255, 0.6);
+}
+
+/* DIARY STATUS WIDGET BAR */
+.diary-status-bar {
+    background-color: white;
+    border: 2px solid var(--pastel-pink-light);
+    box-shadow: 0 8px 25px rgba(255, 143, 171, 0.1);
+    font-size: 0.88rem;
+    color: var(--text-color);
+}
+
+.diary-divider {
+    width: 2px;
+    height: 20px;
+    background-color: var(--pastel-pink-light);
+}
+
+/* STAMP DIVIDER */
+.stamp-line {
+    height: 2px;
+    flex-grow: 1;
+    background: linear-gradient(90deg, transparent, var(--primary-pink), transparent);
+    opacity: 0.4;
+}
+
+.stamp-icon {
+    font-size: 1.2rem;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px dashed var(--primary-pink);
+}
+
+/* CARD & SCRAPBOOK FRAMES */
+.card-custom {
+    background: white;
+    border-radius: 24px;
+    border: 2px solid var(--pastel-pink-light);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(255, 143, 171, 0.15);
+}
+
+.scrapbook-img-frame {
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid var(--pastel-pink-light);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.card-tilt-left {
+    transform: rotate(-2deg);
+}
+
+.card-tilt-right {
+    transform: rotate(2deg);
+}
+
+.card-custom:hover .card-tilt-left,
+.card-custom:hover .card-tilt-right {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.badge-tag {
+    background-color: var(--pastel-blue);
+    color: #0077b6;
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.item-img {
+    height: 280px;
+    object-fit: cover;
+}
+
+/* --- HERO FLOATING GRID (ขยายขนาดรูปใหญ่ขึ้น) --- */
+.kawaii-grid-box {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    height: 420px;
+    margin: 0 auto;
+}
+
+.floating-card {
+    position: absolute;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0.3s;
+}
+
+.floating-card:hover {
+    transform: translateY(-8px) scale(1.05) rotate(0deg) !important;
+    z-index: 20 !important;
+    box-shadow: 0 18px 40px rgba(255, 143, 171, 0.25);
+}
+
+.floating-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.card-1 {
+    width: 55%;
+    height: 200px;
+    top: 10px;
+    left: 0;
+    transform: rotate(-6deg);
+    z-index: 2;
+}
+
+.card-2 {
+    width: 62%;
+    height: 250px;
+    top: 40px;
+    right: -10px;
+    transform: rotate(5deg);
+    z-index: 4;
+}
+
+.card-3 {
+    width: 52%;
+    height: 195px;
+    bottom: 10px;
+    left: 20px;
+    transform: rotate(-4deg);
+    z-index: 3;
+}
+
+/* --- GALLERY PAGE STYLES & SEARCH BAR --- */
+.gallery-hero {
+    background: linear-gradient(180deg, #ffe5ec 0%, #fff9fc 100%);
+    border-bottom: 2px dashed var(--pastel-pink-light);
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+.search-box-wrapper {
+    max-width: 460px;
+}
+
+.search-input {
+    border: 2px solid var(--pastel-pink-light);
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(255, 143, 171, 0.08);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 4px 20px rgba(255, 143, 171, 0.25);
+    outline: none;
+}
+
+.btn-filter {
+    background-color: white;
+    color: var(--text-color);
+    border: 2px solid var(--pastel-pink-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    transition: all 0.25s ease;
+}
+
+.btn-filter:hover, .btn-filter.active {
+    background-color: var(--primary-pink);
+    color: white;
+    border-color: var(--primary-pink);
+    box-shadow: 0 4px 12px rgba(255, 143, 171, 0.3);
+}
+
+/* --- GALLERY 3D FLIP CARDS (ล็อคขนาดรูปภาพให้อยู่ในกรอบการ์ด) --- */
+.flip-card {
+    background-color: transparent;
+    height: 380px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    border: 2px solid var(--pastel-pink-light);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.flip-card-front {
+    background: #ffffff;
+    padding: 14px 14px 18px 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-frame {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.flip-card:hover .card-img {
+    transform: scale(1.06);
+}
+
+.sticker-tag {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(4px);
+    color: #ff5c8a;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.flip-hint-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(4px);
+    color: var(--primary-pink);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.flip-card:hover .flip-hint-badge {
+    transform: scale(1.08);
+}
+
+/* --- ปรับแต่งด้านหลังการ์ดให้อยู่กึ่งกลางสมดุลอย่างเป็นระเบียบ --- */
+.flip-card-back {
+    background: #ffffff;
+    background-image: radial-gradient(var(--pastel-pink-light) 1.2px, transparent 1.2px);
+    background-size: 16px 16px;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+    padding: 2.2rem 1.5rem 1.8rem 1.5rem !important;
+    
+    /* จัดองค์ประกอบภายในให้อยู่กึ่งกลางแนวตั้งและแนวนอน */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.card-back-header {
+    padding-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.card-back-header h4 {
+    margin-top: 0.4rem !important;
+    font-size: 1.25rem;
+}
+
+.card-back-body {
+    flex-grow: 0 !important;
+    margin-bottom: 1.2rem;
+}
+
+.card-story-text {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    text-align: center !important;
+    color: #555e6c !important;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/* --- ปรับแต่งส่วนล่างหลังการ์ดให้จึ้ง & แฮนด์เมดยิ่งขึ้น --- */
+.card-back-footer {
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+}
+
+/* ปุ่ม Turn Back สไตล์แสตมป์ไดอารี่สุดจึ้ง */
+.btn-flip-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 2px dashed var(--primary-pink);
+    background-color: #fff0f5;
+    color: #ff5c8a;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 8px 22px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(255, 143, 171, 0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flip-card-back:hover .btn-flip-back {
+    background-color: var(--primary-pink);
+    color: white;
+    border-color: var(--primary-pink);
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 6px 16px rgba(255, 143, 171, 0.35);
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PINYON SCRIPT FONT */
+.font-pinyon {
+    font-family: "Pinyon Script", cursive !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* --- STICKER STARS DECORATIONS --- */
+.star-sticker {
+    position: absolute;
+    font-size: 1.6rem;
+    z-index: 10;
+    filter: drop-shadow(0 2px 5px rgba(255, 215, 0, 0.3));
+    animation: starFloat 3s ease-in-out infinite alternate;
+}
+
+.star-top-left {
+    top: -15px;
+    left: 20px;
+    transform: rotate(-15deg);
+}
+
+.star-bottom-right {
+    bottom: -10px;
+    right: 20px;
+    font-size: 2rem;
+    transform: rotate(12deg);
+}
+
+.star-sticky-corner {
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+}
+
+/* แอนิเมชันขยับเบาๆ เพิ่มความมีชีวิตชีวา */
+@keyframes starFloat {
+    0% {
+        transform: translateY(0px) rotate(-5deg) scale(1);
+    }
+    100% {
+        transform: translateY(-6px) rotate(8deg) scale(1.1);
+    }
+}
+
+/* --- ปรับแต่งส่วน Favorite Collections ให้จึ้งและคาวาอี้ขึ้น --- */
+.card-custom {
+    background: #ffffff;
+    background-image: radial-gradient(var(--pastel-pink-light) 1.2px, transparent 1.2px);
+    background-size: 16px 16px;
+    border-radius: 24px;
+    border: 2px dashed var(--primary-pink);
+    box-shadow: 0 10px 30px rgba(255, 143, 171, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 18px 40px rgba(255, 143, 171, 0.25);
+}
+
+.scrapbook-img-frame {
+    background: white;
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid var(--pastel-pink-light);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.brand-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-pink);
+    border-radius: 50%;
+    display: inline-block;
+}
+
